@@ -29,7 +29,7 @@ const AddPrayer = () => {
 
     try {
       const response = await axios.post(
-        "https://lifebahn-heaven-05-frontend.vercel.app/api/v1/prayers",
+        "https://lifebahn-heaven-05-backend.vercel.app/api/v1/prayers",
         data,
         {
           headers: {

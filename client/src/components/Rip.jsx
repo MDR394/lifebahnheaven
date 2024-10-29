@@ -29,7 +29,7 @@ function Rip() {
       setFetching(true);
       try {
         const response = await axios.get(
-          `https://lifebahn-heaven-05-frontend.vercel.app/api/v1/posts/post/${_id}`,
+          `https://lifebahn-heaven-05-backend.vercel.app/api/v1/posts/post/${_id}`,
           {
             headers: {
               Authorization: `Bearer ${currentUser?.data.accessToken}`, // Use access token
@@ -50,7 +50,7 @@ function Rip() {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "https://lifebahn-heaven-05-frontend.vercel.app/api/v1/users/normal",
+          "https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/normal",
           {
             headers: {
               Authorization: `Bearer ${currentUser?.data.accessToken}`,
@@ -67,7 +67,7 @@ function Rip() {
     const fetchFlowers = async () => {
       try {
         const response = await axios.get(
-          "https://lifebahn-heaven-05-frontend.vercel.app/api/v1/flowers",
+          "https://lifebahn-heaven-05-backend.vercel.app/api/v1/flowers",
           {
             headers: {
               Authorization: `Bearer ${currentUser?.data.accessToken}`,
@@ -93,7 +93,7 @@ function Rip() {
 
     try {
       await axios.patch(
-        `https://lifebahn-heaven-05-frontend.vercel.app/api/v1/users/${selectedUser}/roles`,
+        `https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/${selectedUser}/roles`,
         { roles: "contributor" }, // Changing role to contributor
         {
           headers: {

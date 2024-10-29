@@ -21,7 +21,7 @@ const Profile = () => {
       setFetching(true);
       try {
         const response = await axios.get(
-          `https://lifebahn-heaven-05-frontend.vercel.app/api/v1/posts/${currentUser.data.user._id}`,
+          `https://lifebahn-heaven-05-backend.vercel.app/api/v1/posts/${currentUser.data.user._id}`,
           {
             headers: {
               Authorization: `Bearer ${currentUser?.data.accessToken}`, // Use access token
@@ -46,7 +46,7 @@ const Profile = () => {
   const handleDelete = async (postId) => {
     try {
       await axios.delete(
-        `https://lifebahn-heaven-05-frontend.vercel.app/api/v1/posts/${postId}`,
+        `https://lifebahn-heaven-05-backend.vercel.app/api/v1/posts/${postId}`,
         {
           headers: {
             Authorization: `Bearer ${currentUser?.data.accessToken}`,
@@ -83,7 +83,7 @@ const Profile = () => {
 
     try {
       const postRes = await axios.patch(
-        `https://lifebahn-heaven-05-frontend.vercel.app/api/v1/posts/${selectedPost._id}`,
+        `https://lifebahn-heaven-05-backend.vercel.app/api/v1/posts/${selectedPost._id}`,
         formData,
         {
           headers: {
