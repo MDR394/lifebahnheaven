@@ -28,14 +28,11 @@ function Rip() {
     const fetchData = async () => {
       setFetching(true);
       try {
-        const response = await axios.get(
-          `https://lifebahn-heaven-05-backend.vercel.app/api/v1/posts/post/${_id}`,
-          {
-            headers: {
-              Authorization: `Bearer ${currentUser?.data.accessToken}`, // Use access token
-            },
-          }
-        );
+        const response = await axios.get(`/api/v1/posts/post/${_id}`, {
+          headers: {
+            Authorization: `Bearer ${currentUser?.data.accessToken}`, // Use access token
+          },
+        });
 
         const jsonData = response.data.data;
         // console.log(jsonData);
@@ -49,14 +46,11 @@ function Rip() {
 
     const fetchUsers = async () => {
       try {
-        const response = await axios.get(
-          "https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/normal",
-          {
-            headers: {
-              Authorization: `Bearer ${currentUser?.data.accessToken}`,
-            },
-          }
-        );
+        const response = await axios.get("/api/v1/users/normal", {
+          headers: {
+            Authorization: `Bearer ${currentUser?.data.accessToken}`,
+          },
+        });
         // console.log("Fetched Users:", response.data.data); // Log the response
         setUsers(response.data.data); // Check if this is setting the correct users
       } catch (error) {
@@ -66,14 +60,11 @@ function Rip() {
 
     const fetchFlowers = async () => {
       try {
-        const response = await axios.get(
-          "https://lifebahn-heaven-05-backend.vercel.app/api/v1/flowers",
-          {
-            headers: {
-              Authorization: `Bearer ${currentUser?.data.accessToken}`,
-            },
-          }
-        );
+        const response = await axios.get("/api/v1/flowers", {
+          headers: {
+            Authorization: `Bearer ${currentUser?.data.accessToken}`,
+          },
+        });
         // console.log("Fetched flowers:", response.data.data); // Log the response
         setFlowersData(response.data.data);
       } catch (error) {
@@ -93,7 +84,7 @@ function Rip() {
 
     try {
       await axios.patch(
-        `https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/${selectedUser}/roles`,
+        `/api/v1/users/${selectedUser}/roles`,
         { roles: "contributor" }, // Changing role to contributor
         {
           headers: {

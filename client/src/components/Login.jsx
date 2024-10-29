@@ -27,15 +27,11 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/login",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post("/api/v1/users/login", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       // console.log(response.data);
       alert("Login Successful");
       updateUser(response.data);

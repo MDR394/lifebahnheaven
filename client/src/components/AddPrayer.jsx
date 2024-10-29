@@ -28,15 +28,11 @@ const AddPrayer = () => {
     data.append("prayerText", formData.prayerText);
 
     try {
-      const response = await axios.post(
-        "https://lifebahn-heaven-05-backend.vercel.app/api/v1/prayers",
-        data,
-        {
-          headers: {
-            Authorization: `Bearer ${currentUser?.data.accessToken}`,
-          },
-        }
-      );
+      const response = await axios.post("/api/v1/prayers", data, {
+        headers: {
+          Authorization: `Bearer ${currentUser?.data.accessToken}`,
+        },
+      });
 
       console.log(response);
       alert("Prayer Created Successfully");

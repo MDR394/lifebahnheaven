@@ -18,7 +18,7 @@ const Header = ({ isAuthenticated }) => {
     try {
       // First attempt to logout
       await axios.post(
-        "https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/logout",
+        "/api/v1/users/logout",
         {},
         {
           headers: {
@@ -37,10 +37,9 @@ const Header = ({ isAuthenticated }) => {
       ) {
         // Handle token refresh on token expiry
         try {
-          const response = await axios.post(
-            "https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/refresh-token",
-            { refreshToken: currentUser?.data.refreshToken }
-          );
+          const response = await axios.post("/api/v1/users/refresh-token", {
+            refreshToken: currentUser?.data.refreshToken,
+          });
           const { accessToken } = response.data.data;
           // Update access token and retry logout
           currentUser.data.accessToken = accessToken;

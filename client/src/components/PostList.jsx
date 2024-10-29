@@ -18,14 +18,11 @@ function PostList() {
     const fetchData = async () => {
       setFetching(true);
       try {
-        const response = await axios.get(
-          "https://lifebahn-heaven-05-backend.vercel.app/api/v1/posts",
-          {
-            headers: {
-              Authorization: `Bearer ${currentUser?.data.accessToken}`, // Use access token
-            },
-          }
-        );
+        const response = await axios.get("/api/v1/posts", {
+          headers: {
+            Authorization: `Bearer ${currentUser?.data.accessToken}`, // Use access token
+          },
+        });
 
         const jsonData = response.data;
 
@@ -47,7 +44,7 @@ function PostList() {
   const becomeSponsor = async () => {
     try {
       const response = await axios.patch(
-        "https://lifebahn-heaven-05-backend.vercel.app/api/v1/users/become-sponsor",
+        "/api/v1/users/become-sponsor",
         {},
         {
           headers: {
