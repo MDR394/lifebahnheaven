@@ -62,7 +62,7 @@ const Header = ({ isAuthenticated }) => {
     <>
       <header className="bg-dark p-3 mb-3 border-bottom">
         <div className="container">
-          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center">
             <a
               href="/"
               className="d-flex align-items-center text-white fw-bold mb-2 mb-lg-0 text-decoration-none"
@@ -108,7 +108,7 @@ const Header = ({ isAuthenticated }) => {
               )}
             </ul>
 
-            <form
+            {/* <form
               className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 search__input"
               role="search"
             >
@@ -118,7 +118,7 @@ const Header = ({ isAuthenticated }) => {
                 placeholder="Search..."
                 aria-label="Search"
               />
-            </form>
+            </form> */}
 
             <div className="dropdown text-end">
               <a
