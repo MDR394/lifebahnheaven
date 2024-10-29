@@ -45,11 +45,15 @@ const SignUp = () => {
     data.append("avatar", formData.avatar);
 
     try {
-      const response = await axios.post("/api/v1/users/register", data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        "https://lifebahnheaven-server.vercel.app/api/v1/users/register",
+        data,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       alert("User Registered Successfully");
       navigate("/login");
     } catch (error) {
