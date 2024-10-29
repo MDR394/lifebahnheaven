@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
   getAllPost,
   createPost,
-  updatePost,
+  // updatePost,
   deletePost,
   getAllPostById,
   getPostById,
@@ -32,7 +32,7 @@ router.get("/:userId", getAllPostById);
 // router.route("/:postId").delete(deletePost).patch(updatePost);
 
 router.get("/post/:postId", getPostById);
-router.patch("/:postId", updatePost);
+// router.patch("/:postId", updatePost);
 router.delete("/:postId", deletePost);
 
 export default router;

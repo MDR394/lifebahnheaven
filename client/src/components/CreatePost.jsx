@@ -58,7 +58,7 @@ const CreatePost = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/posts",
+        "https://lifebahn-heaven-05-backend.vercel.app/api/v1/posts",
         data,
         {
           headers: {
