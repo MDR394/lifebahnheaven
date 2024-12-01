@@ -47,7 +47,7 @@ const Document = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/documents", // Adjust endpoint if necessary
+        "https://lifebahnheaven-server.vercel.app/api/v1/documents", // Adjust endpoint if necessary
         data,
         {
           headers: {

@@ -22,7 +22,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/users/forgot-password",
+        "https://lifebahnheaven-server.vercel.app/api/v1/users/forgot-password",
         formData
       );
       alert(response.data.message);

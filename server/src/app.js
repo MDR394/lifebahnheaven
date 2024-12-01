@@ -31,7 +31,7 @@ app.use("/api/v1/flowers", flowerRouter);
 app.use("/api/v1/prayers", prayerRouter);
 app.use("/api/v1/photos", photoRouter);
 app.use("/api/v1/documents", documentRouter);
-// http://localhost:3000/api/v1/users/register
+// https://lifebahnheaven-server.vercel.app/api/v1/users/register
 
 app.use(errorHandler);
 export { app };

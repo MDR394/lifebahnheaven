@@ -41,7 +41,7 @@ const AddFlower = ({ onFlowerAdded }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/flowers",
+        "https://lifebahnheaven-server.vercel.app/api/v1/flowers",
         data,
         {
           headers: {

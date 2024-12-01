@@ -40,7 +40,7 @@ const Photos = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/photos",
+        "https://lifebahnheaven-server.vercel.app/api/v1/photos",
         data,
         {
           headers: {
